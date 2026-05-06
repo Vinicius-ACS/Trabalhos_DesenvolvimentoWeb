@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cardápio digital do O Rei da Pizza - Asa Norte. Pizzas tradicionais, especiais e doces.">
+  <title>Cardápio | O Rei da Pizza - Asa Norte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#cardapio">Ir para o cardápio</a>
+<div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+<header class="topbar">
+  <div class="container topbar__in">
+    <a class="brand" href="index.html" aria-label="Página inicial O Rei da Pizza">
+      <img class="brand__mark" src="https://d2nagnwby8accc.cloudfront.net/companies/logos/thumbnails/d05f62c7-d4f9-47b7-abe9-4626ac57e216.webp" alt="Logotipo O Rei da Pizza">
+      <span>O Rei da Pizza<small>Cardápio · Asa Norte</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="products.html" aria-current="page">Cardápio</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=5561981579252" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <button class="icon-btn menu-btn" aria-label="Abrir menu" aria-controls="mobile-nav" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav container" aria-label="Menu mobile">
+    <a href="index.html">Início</a>
+    <a href="products.html">Cardápio</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main id="cardapio" tabindex="-1">
+  <section class="menu-hero" aria-labelledby="menu-title">
+    <div class="container menu-shell">
+      <div class="restaurant-panel">
+        <div>
+          <span class="status">Aberto agora</span>
+          <h1 id="menu-title" class="menu-title">Cardápio</h1>
+          <p class="lead">Escolha seus sabores, adicione ao pedido e finalize pelo WhatsApp.</p>
+        </div>
+        <a class="btn btn-outline" href="index.html">Voltar à home</a>
+      </div>
+
+      <form class="search-card" role="search" onsubmit="return false">
+        <label for="search">Buscar produto</label>
+        <input id="search" type="search" autocomplete="off" placeholder="Ex.: calabresa, quatro queijos, margherita, chocolate...">
+      </form>
+    </div>
+  </section>
+
+  <div class="category-bar">
+    <div class="container tabs" role="group" aria-label="Categorias do cardápio">
+      <button class="tab active" type="button" data-filter="todos">Todos</button>
+      <button class="tab" type="button" data-filter="tradicionais">Tradicionais</button>
+      <button class="tab" type="button" data-filter="especiais">Especiais</button>
+      <button class="tab" type="button" data-filter="doces">Doces</button>
+    </div>
+  </div>
+
+  <div class="container menu-layout">
+    <section aria-label="Produtos do cardápio">
+      <div class="empty-state" id="empty-state">Nenhum produto encontrado. Tente outro termo ou categoria.</div>
+
+      <h2 class="group-title" id="tradicionais">Pizzas tradicionais</h2>
+      <div class="products">
+        <article class="product-card" data-category="tradicionais" data-search="pizza calabresa mussarela cebola oregano molho tomate">
+          <img src="assets/pizzas/calabresa.webp" alt="Pizza de calabresa com cebola" loading="lazy">
+          <div>
+            <span class="product-chip">Clássica</span>
+            <h3>Pizza Calabresa</h3>
+            <p>Molho, mussarela, calabresa fatiada, cebola e orégano.</p>
+            <div class="product-bottom"><span class="price">R$ 45,00</span><button class="add" type="button" aria-label="Adicionar Pizza Calabresa">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="tradicionais" data-search="pizza mussarela queijo molho tomate oregano muçarela">
+          <img src="assets/pizzas/mussarela.webp" alt="Pizza de mussarela" loading="lazy">
+          <div>
+            <span class="product-chip">Tradicional</span>
+            <h3>Pizza Mussarela</h3>
+            <p>Molho de tomate, mussarela especial e orégano.</p>
+            <div class="product-bottom"><span class="price">R$ 40,00</span><button class="add" type="button" aria-label="Adicionar Pizza Mussarela">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="tradicionais" data-search="pizza margherita mussarela tomate manjericao manjericão molho">
+          <img src="assets/pizzas/margherita.webp" alt="Pizza Margherita com tomate e manjericão" loading="lazy">
+          <div>
+            <span class="product-chip">Leve</span>
+            <h3>Pizza Margherita</h3>
+            <p>Mussarela, tomate fresco, manjericão e molho da casa.</p>
+            <div class="product-bottom"><span class="price">R$ 42,00</span><button class="add" type="button" aria-label="Adicionar Pizza Margherita">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="tradicionais" data-search="pizza milho mussarela milho verde oregano">
+          <img src="assets/pizzas/milho.webp" alt="Pizza de milho" loading="lazy">
+          <div>
+            <span class="product-chip">Suave</span>
+            <h3>Pizza Milho</h3>
+            <p>Mussarela, milho verde, molho de tomate e orégano.</p>
+            <div class="product-bottom"><span class="price">R$ 43,00</span><button class="add" type="button" aria-label="Adicionar Pizza Milho">Adicionar</button></div>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="group-title" id="especiais">Pizzas especiais</h2>
+      <div class="products">
+        <article class="product-card" data-category="especiais" data-search="pizza a moda do rei especial presunto milho cebola tomate">
+          <img src="assets/pizzas/a-moda-do-rei.webp" alt="Pizza À Moda do Rei" loading="lazy">
+          <div>
+            <span class="product-chip highlight">Da casa</span>
+            <h3>À Moda do Rei</h3>
+            <p>Uma combinação generosa de ingredientes selecionados, no padrão da casa.</p>
+            <div class="product-bottom"><span class="price">R$ 56,00</span><button class="add" type="button" aria-label="Adicionar À Moda do Rei">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="especiais" data-search="pizza calabresa especial calabresa cebola catupiry mussarela">
+          <img src="assets/pizzas/calabresa-especial.webp" alt="Pizza Calabresa Especial" loading="lazy">
+          <div>
+            <span class="product-chip highlight">Mais pedida</span>
+            <h3>Calabresa Especial</h3>
+            <p>Calabresa, mussarela, cebola roxa, catupiry e orégano.</p>
+            <div class="product-bottom"><span class="price">R$ 54,00</span><button class="add" type="button" aria-label="Adicionar Calabresa Especial">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="especiais" data-search="pizza quatro queijos mussarela parmesao gorgonzola catupiry">
+          <img src="assets/pizzas/4-queijos.webp" alt="Pizza quatro queijos" loading="lazy">
+          <div>
+            <span class="product-chip">Cremosa</span>
+            <h3>Quatro Queijos</h3>
+            <p>Mussarela, parmesão, gorgonzola e catupiry cremoso.</p>
+            <div class="product-bottom"><span class="price">R$ 48,00</span><button class="add" type="button" aria-label="Adicionar Quatro Queijos">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="especiais" data-search="pizza frango cheddar bacon mussarela">
+          <img src="assets/pizzas/frango-cheddar-bacon.webp" alt="Pizza de frango com cheddar e bacon" loading="lazy">
+          <div>
+            <span class="product-chip">Especial</span>
+            <h3>Frango, Cheddar e Bacon</h3>
+            <p>Frango desfiado, cheddar cremoso, bacon crocante e mussarela.</p>
+            <div class="product-bottom"><span class="price">R$ 58,00</span><button class="add" type="button" aria-label="Adicionar Frango, Cheddar e Bacon">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="especiais" data-search="pizza california califórnia especial doce salgada frutas">
+          <img src="assets/pizzas/california.webp" alt="Pizza Califórnia" loading="lazy">
+          <div>
+            <span class="product-chip">Especial</span>
+            <h3>Pizza Califórnia</h3>
+            <p>Sabor especial para quem gosta de combinações marcantes e diferentes.</p>
+            <div class="product-bottom"><span class="price">R$ 55,00</span><button class="add" type="button" aria-label="Adicionar Pizza Califórnia">Adicionar</button></div>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="group-title" id="doces">Pizzas doces</h2>
+      <div class="products">
+        <article class="product-card" data-category="doces" data-search="pizza doce chocolate sobremesa chocolate raspas">
+          <img src="assets/pizzas/chocolate.webp" alt="Pizza doce de chocolate" loading="lazy">
+          <div>
+            <span class="product-chip">Doce</span>
+            <h3>Chocolate</h3>
+            <p>Massa da casa com cobertura cremosa de chocolate.</p>
+            <div class="product-bottom"><span class="price">R$ 39,00</span><button class="add" type="button" aria-label="Adicionar Pizza Chocolate">Adicionar</button></div>
+          </div>
+        </article>
+        <article class="product-card" data-category="doces" data-search="pizza doce leite banana canela sobremesa">
+          <img src="assets/pizzas/doce-de-leite-banana.webp" alt="Pizza doce de leite com banana" loading="lazy">
+          <div>
+            <span class="product-chip">Doce</span>
+            <h3>Doce de Leite com Banana</h3>
+            <p>Doce de leite, banana e canela para finalizar o pedido.</p>
+            <div class="product-bottom"><span class="price">R$ 41,00</span><button class="add" type="button" aria-label="Adicionar Doce de Leite com Banana">Adicionar</button></div>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <aside class="cart" aria-labelledby="cart-title">
+      <h2 id="cart-title">Seu pedido</h2>
+      <p class="cart-empty" id="cart-empty">Nenhum item adicionado.</p>
+      <ul class="cart-list" id="cart-list"></ul>
+      <a class="btn btn-primary" id="finish-order" href="https://api.whatsapp.com/send?phone=5561981579252" target="_blank" rel="noopener noreferrer">Finalizar no WhatsApp</a>
+    </aside>
+  </div>
+</main>
+
+<footer id="contato" class="footer">
+  <div class="container">
+    <div><strong>O Rei da Pizza - Asa Norte</strong><p>SHCGN CRN 708/709, Asa Norte, Brasília - DF.</p></div>
+    <nav class="footer-links" aria-label="Links finais">
+      <a href="index.html">Início</a>
+      <a href="https://api.whatsapp.com/send?phone=5561981579252" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/oreidapizzabsb" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="a11y-toggle" id="a11y-toggle" aria-label="Abrir opções de acessibilidade" aria-expanded="false" aria-controls="a11y-panel">
+  <img src="assets/acessibilidade.png" alt="">
+</button>
+<section class="a11y-panel" id="a11y-panel" aria-labelledby="a11y-title" aria-hidden="true">
+  <h2 id="a11y-title">Acessibilidade</h2>
+  <button type="button" data-a11y="text">Aumentar texto</button>
+  <button type="button" data-a11y="contrast">Alto contraste</button>
+  <button type="button" data-a11y="motion">Reduzir movimento</button>
+  <button type="button" data-a11y="reset">Restaurar padrão</button>
+</section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/script.js"></script>
+</body>
+</html>
