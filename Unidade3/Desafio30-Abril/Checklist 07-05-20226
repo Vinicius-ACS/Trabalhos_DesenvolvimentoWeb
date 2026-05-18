@@ -1,0 +1,27 @@
+Checklist 07/05
+O projeto utiliza o site da pizzaria O Rei da Pizza - Asa Norte como base, reutilizando o layout responsivo desenvolvido anteriormente, que funciona corretamente em dispositivos móveis, tablets e desktop.
+
+
+Para atender aos requisitos da atividade, foi adicionada uma seção de comentários na página index.html. Nessa seção, o usuário encontra um campo de texto simples para informar o nome, uma área de texto para escrever o comentário e um botão para enviar.
+
+
+Esses dois elementos — a área de texto (<textarea>) e o botão (<button>) representam os elementos HTML exigidos pela atividade.
+
+
+O arquivo script.js centraliza toda a lógica de interação do site e está vinculado corretamente ao final do <body> nas duas páginas do projeto. Dentro dele, os elementos da seção de comentários são selecionados pelo método getElementById, que busca cada elemento diretamente pelo seu id no HTML, permitindo lê-los e modificá-los via JavaScript.
+
+
+Os três eventos exigidos estão implementados nessa mesma seção.
+
+
+O evento keyup é disparado a cada tecla solta dentro da área de texto e atualiza um contador que mostra quantos caracteres já foram digitados.
+
+
+O evento mouseover é ativado quando o cursor passa sobre o botão de enviar, aplicando um leve pulso visual como resposta. O evento click é executado ao clicar no botão e realiza a validação dos campos exibindo mensagens de erro caso estejam vazios ou muito curtos e, quando tudo está correto, insere o novo comentário no topo da lista dinamicamente, sem recarregar a página.
+
+
+Os fluxos de interação foram testados localmente no navegador, verificando o envio com dados válidos, as mensagens de erro, o contador de caracteres e o comportamento em diferentes tamanhos de tela.
+
+
+Por fim, todas as alterações foram registradas com mensagem de commit descritiva e enviadas para o repositório remoto no GitHub.
+
